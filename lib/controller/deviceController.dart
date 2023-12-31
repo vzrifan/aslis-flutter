@@ -74,7 +74,14 @@ class DeviceController extends GetxController {
       is_halaman.value = 2;
       data.forEach((element) {
         print("okes");
-        list_device.add(element);
+        Map<String, dynamic> updatedMap = element ?? {};
+
+        updatedMap.forEach((key, value) {
+          if (value == null) {
+            updatedMap[key] = "";
+          }
+        });
+        list_device.add(updatedMap);
       });
       print(list_device);
       // is_loading.value = 0;

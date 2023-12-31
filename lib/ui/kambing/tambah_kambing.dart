@@ -94,7 +94,7 @@ class _AddGoatState extends State<AddGoat> {
       ),
       body: SingleChildScrollView(
           child: FutureBuilder(
-        future: kan_controller.GetKandang(""), //TODO
+        future: kan_controller.GetKandang(""), // TODO
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Container();
@@ -797,12 +797,12 @@ class _AddGoatState extends State<AddGoat> {
                                           "Bearer " + box.read("token");
                                       var respone = await http.get(uri_api,
                                           headers: {"Authorization": is_token});
+                                      print("Tested");
                                       // var data = json.decode(respone.body);
                                       var data = json.decode(respone.body)
                                           as Map<String, dynamic>;
                                       var dataProvince =
                                           data['data'] as List<dynamic>;
-                                      print("Tested");
                                       print(dataProvince);
                                       dataProvince.add({
                                         "id": "",
