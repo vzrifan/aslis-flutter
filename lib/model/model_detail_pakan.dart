@@ -45,20 +45,20 @@ class DetailPakanModel {
 
   factory DetailPakanModel.fromJson(Map<String, dynamic> json) =>
       DetailPakanModel(
-        id: json["id"] ?? "",
-        foodName: json["food_name"] ?? "",
-        foodId: json["food_id"] ?? "",
-        date: json["date"] ?? "",
-        capitalPrice: json["capital_price"] ?? "",
+        id: json["id"].toString() ?? "",
+        foodName: json["food_name"].toString() ?? "",
+        foodId: json["food_id"].toString() ?? "",
+        date: json["date"].toString() ?? "",
+        capitalPrice: json["capital_price"].toString() ?? "",
         status: json["status"] ?? 0,
-        price: json["price"] ?? "",
-        stock: json["stock"] ?? "",
-        idCategory: json["id_category"] ?? "",
-        availableStock: json["available_stock"] ?? "",
-        categoryName: json["category_name"] ?? "",
+        price: json["price"].toString() ?? "",
+        stock: json["stock"].toString() ?? "",
+        idCategory: json["id_category"].toString() ?? "",
+        availableStock: json["available_stock"].toString() ?? "",
+        categoryName: json["category_name"].toString() ?? "",
         is_available: json["is_available"] ?? 0,
-        total: json["total"] ?? "0",
-        total_stock: json["total_stock"] ?? "0",
+        total: json["total"].toString() ?? "0",
+        total_stock: json["total_stock"].toString() ?? "0",
       );
 
   Map<String, dynamic> toJson() => {

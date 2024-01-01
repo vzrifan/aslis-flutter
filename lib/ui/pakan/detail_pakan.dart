@@ -34,7 +34,7 @@ class _DetailPakanState extends State<DetailPakan> {
       var response = await http.post(uri_api,
           body: {"id": widget.id}, headers: {"Authorization": is_token});
       var data = json.decode(response.body)['data'];
-      print(data.toString());
+      print(data);
       if (response.statusCode == 200) {
         // nama_kandang = data['shed_name'];
         m_pakan = DetailPakanModel.fromJson(data);
