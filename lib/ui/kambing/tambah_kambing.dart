@@ -514,8 +514,11 @@ class _AddGoatState extends State<AddGoat> {
                                   scanQR();
                                 },
                                 icon: Image(
-                                    image:
-                                        AssetImage("assets/image/i_scan.png")))
+                                  image: AssetImage("assets/image/i_scan.png"),
+                                  width:
+                                      MediaQuery.of(context).size.width - 200,
+                                  height: 100,
+                                ))
                           ],
                         ),
                         SizedBox(

@@ -107,7 +107,11 @@ class AddDevicePage extends StatelessWidget {
                       onPressed: () {
                         scanQR();
                       },
-                      icon: Image(image: AssetImage("assets/image/i_scan.png")))
+                      icon: Image(
+                        image: AssetImage("assets/image/i_scan.png"),
+                        width: MediaQuery.of(context).size.width - 200,
+                        height: 100,
+                      ))
                 ],
               ),
               SizedBox(
