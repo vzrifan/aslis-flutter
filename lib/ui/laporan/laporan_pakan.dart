@@ -60,8 +60,8 @@ class LaporanPakanPage extends StatelessWidget {
             return WebViewWidget(
                 controller: WebViewController()
                   // TODO initial url
-                  ..setUserAgent(links)
-                  ..setJavaScriptMode(JavaScriptMode.unrestricted));
+                  ..setJavaScriptMode(JavaScriptMode.unrestricted)
+                  ..loadRequest(Uri.parse(links)));
 
             // return WebView(
             //   initialUrl: links,

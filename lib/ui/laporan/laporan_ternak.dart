@@ -62,7 +62,7 @@ class LaporanTernakPage extends StatelessWidget {
             return WebViewWidget(
                 controller: WebViewController()
                   // TODO initial url
-                  ..setUserAgent(links)
+                  ..loadRequest(Uri.parse(links))
                   ..setJavaScriptMode(JavaScriptMode.unrestricted));
             // return WebView(
             //   initialUrl: links,

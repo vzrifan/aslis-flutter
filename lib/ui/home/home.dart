@@ -26,6 +26,7 @@ import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -38,6 +39,12 @@ class _HomePageState extends State<HomePage> {
   final kambing_c = Get.put(KambingController());
   final box = GetStorage();
   final RefreshController refreshController = RefreshController();
+
+  String getCurrentMonthAndYear() {
+    var now = DateTime.now();
+    var formatter = DateFormat('MMMM yyyy');
+    return formatter.format(now);
+  }
 
   Future<void> startBarcodeScanStream() async {
     FlutterBarcodeScanner.getBarcodeStreamReceiver(
@@ -231,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                                   height: 4,
                                 ),
                                 Text(
-                                  "Periode: Juni 2022",
+                                  "Periode: ${getCurrentMonthAndYear()}",
                                   style: ThemesCustom.black_10_400_07,
                                 ),
                                 SizedBox(
